@@ -54,6 +54,13 @@
     backdrop-filter: blur(24px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
+
+  .glow-text {
+    text-shadow: 0 0 30px color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+  .glow-border {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
 }
 
 
@@ -93,4 +100,101 @@
   .animate-fade-in {
     animation: fade-in 0.8s ease-in-out both;
   }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+
+.box {
+  --border-angle: 0turn;
+
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    var(--color-secondary),
+    #112 5%,
+    #112 60%,
+    var(--color-secondary)95%
+  );
+
+  border: solid 5px transparent;
+  border-radius: 2em;
+
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    var(--color-secondary),
+    var(--color-primary) 99%,
+    transparent
+  );
+
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+
+  background-position: center center;
+
+  animation: bg-spin 6s linear infinite;
+}
+
+.box:hover {
+  animation-duration: 2s;
+  box-shadow: 0 0 20px #22c55e;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
 }
