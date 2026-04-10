@@ -54,7 +54,6 @@ export const Hero = () => {
             }}
           />
         ))}
-        ;
       </div>
       {/*Content*/}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -93,7 +92,7 @@ export const Hero = () => {
               </Button>
               <button className="box flex gap-2 relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 px-8 py-4 text-lg">
                 <Download className="w-5 h-5" />
-                <span>Download CV</span>
+                <a href="/cv.pdf" download><span>Download CV</span></a>
               </button>
             </div>
             <div className="flex items-center gap-4 animation-fade-in animation-delay-400">
@@ -115,7 +114,6 @@ export const Hero = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-              ;
             </div>
           </div>
           {/*right column*/}
