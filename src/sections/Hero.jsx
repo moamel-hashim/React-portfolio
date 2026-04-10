@@ -92,7 +92,7 @@ export const Hero = () => {
               </Button>
               <button className="box flex gap-2 relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 px-8 py-4 text-lg">
                 <Download className="w-5 h-5" />
-                <a href="/cv.pdf" download><span>Download CV</span></a>
+                <a href="/Moamel_Hashim_Resume.pdf" download><span>Download CV</span></a>
               </button>
             </div>
             <div className="flex items-center gap-4 animation-fade-in animation-delay-400">
