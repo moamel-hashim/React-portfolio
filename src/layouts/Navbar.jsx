@@ -1,6 +1,7 @@
 import { Button } from "../components/Button";
 import { Menu, X } from "lucide-react";
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -26,7 +27,7 @@ export const Navbar = () => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-background/80 glass-strong py-3' : 'bg-transparent py-5'}`}>
       <nav className='container mx-auto px-6 flex items-center justify-between'>
-        <a href='#' className='text-xl font-bold tracking-tight hover:text-primary transition-colors duration-500'>Moamel Hashim<span className='text-primary'>.</span></a>
+        <Link to='/' className='text-xl font-bold tracking-tight hover:text-primary transition-colors duration-500'>Moamel Hashim<span className='text-primary'>.</span></Link>
 
         <div className='hidden md:flex items-center gap-1'>
           <div className='glass rounded-full px-2 py1 flex items-center gap-1'>
