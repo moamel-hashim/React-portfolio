@@ -7,6 +7,7 @@ import { Contact } from "./sections/Contact";
 import { Experience } from "./sections/Experience";
 import { Testimonials } from "./sections/Testimonials";
 import { NotFound } from "./pages/NotFound";
+import { Projects } from "./sections/Projects";
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
       <Contact />
       <Experience />
       <Testimonials />
+      <Projects />
     </>
   );
 }
