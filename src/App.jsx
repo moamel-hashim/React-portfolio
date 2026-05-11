@@ -5,7 +5,6 @@ import { Navbar } from "./layouts/Navbar";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Experience } from "./sections/Experience";
-import { Testimonials } from "./sections/Testimonials";
 import { NotFound } from "./pages/NotFound";
 import { Projects } from "./sections/Projects";
 
@@ -15,9 +14,8 @@ function HomePage() {
       <Hero />
       <About />
       <Projects />
-      <Contact />
-      <Testimonials />
       <Experience />
+      <Contact />
     </>
   );
 }
