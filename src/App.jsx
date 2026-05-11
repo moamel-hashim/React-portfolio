@@ -14,10 +14,10 @@ function HomePage() {
     <>
       <Hero />
       <About />
-      <Contact />
-      <Experience />
-      <Testimonials />
       <Projects />
+      <Contact />
+      <Testimonials />
+      <Experience />
     </>
   );
 }
